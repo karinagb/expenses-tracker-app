@@ -1,9 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Expenses Tracker</title>
-        <link rel="stylesheet" href="style.css"/>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expenses Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header><h1>Expenses Tracker</h1></header>
+    <main>
+      <div class="balance">
+        <h1>Balance</h1>
+        <p class="balanceValue"></p>
+      </div>
+
+      <div class="forms">
+        <form class="income">
+          <h2>New income</h2>
+          <label for="incomeName">Description</label>
+          <input name="incomeName" id="incomeName" />
+          <label for="incomeValue">Amount ($)</label>
+          <input name="incomeValue" id="incomeValue" />
+          <button type="submit">Add Income</button>
+        </form>
+
+        <form class="expense">
+          <h2>New expense</h2>
+          <label for="expenseName">Description</label>
+          <input name="expenseName" id="expenseName" />
+          <label for="expenseValue">Amount ($)</label>
+          <input name="expenseValue" id="expenseValue" />
+          <button type="submit">Add Expense</button>
+        </form>
+      </div>
+
+      <div class="history">
+        <h1>History</h1>
+        <table>
+          <thead>
+            <th scope="col">Transaction</th>
+            <th scope="col">Amount</th>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+
+    </main>
+    <footer>Two Dev</footer>
+    <script src="script.js"></script>
+  </body>
 </html>
