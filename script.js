@@ -1,10 +1,15 @@
 const incomeForm = document.querySelector('.income');
 const expenseForm = document.querySelector('.expense');
 const balanceValue = document.querySelector('.balanceValue');
-const historyItem = document.querySelector('tbody');
-let incomeTotal = 0;
-let expenseTotal = 0;
-let balance = 0;
+const historyItems = document.querySelector('tbody');
+const transactions = JSON.parse(localStorage.getItem('transactions')) || [];
+
+let balance = JSON.parse(localStorage.getItem('balance')) || 0;
+let incomeTotal = JSON.parse(localStorage.getItem('incomeTotal')) || 0;
+let expenseTotal = JSON.parse(localStorage.getItem('expenseTotal')) || 0;
+
+renderBalance(balance);
+renderHistory(transactions);
 
 function addIncome(e) {
   e.preventDefault();
@@ -17,6 +22,7 @@ function addIncome(e) {
   };
 
   incomeTotal = incomeTotal + incomeValue;
+  localStorage.setItem('incomeTotal', JSON.stringify(incomeTotal));
 
   this.reset();
   updateBalance();
@@ -34,6 +40,7 @@ function addExpense(e) {
   };
 
   expenseTotal = expenseTotal + expenseValue;
+  localStorage.setItem('expenseTotal', JSON.stringify(expenseTotal));
 
   this.reset();
   updateBalance();
@@ -42,15 +49,29 @@ function addExpense(e) {
 
 function updateBalance() {
   balance = incomeTotal - expenseTotal;
+  localStorage.setItem('balance', JSON.stringify(balance));
+  renderBalance(balance);
+}
 
+function renderBalance(balance) {
   return (balanceValue.innerHTML = `<p>$${balance}</p>`);
 }
 
 function updateHistory(transaction) {
-  return (historyItem.innerHTML += `<tr>
+  transactions.push(transaction);
+  localStorage.setItem('transactions', JSON.stringify(transactions));
+  renderHistory(transactions);
+}
+
+function renderHistory(transactions) {
+  historyItems.innerHTML = ' ';
+
+  transactions.forEach((transaction) => {
+    historyItems.innerHTML += `<tr>
         <td>${transaction.description}</td>
         <td>$${transaction.value}</td>
-    </tr>`);
+    </tr>`;
+  });
 }
 
 incomeForm.addEventListener('submit', addIncome);
