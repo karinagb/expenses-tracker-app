@@ -48,11 +48,13 @@ main {
   border-radius: 15px;
 
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  justify-items: center;
 }
 
 /* ===== FORMS WRAPPER ===== */
 
 .forms {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -69,8 +71,8 @@ main {
 
 /* ===== FORM CARDS ===== */
 
-.income,
-.expense {
+.newIncome,
+.newExpense {
   flex: 1;
 
   background-color: white;
@@ -84,8 +86,8 @@ main {
 
 /* ===== TITLES ===== */
 
-.income h2,
-.expense h2 {
+.newIncome h2,
+.newExpense h2 {
   text-align: center;
   margin-bottom: 18px;
 
@@ -136,7 +138,7 @@ input:focus {
 
 /* ===== BUTTONS ===== */
 
-button {
+form button {
   width: 100%;
 
   padding: 10px;
@@ -145,7 +147,7 @@ button {
 
   border-radius: 8px;
 
-  background-color: #6d28d9;
+  background-color: #312e81;
 
   color: white;
 
@@ -166,7 +168,7 @@ button:hover {
 
 .history {
   margin-top: 25px;
-
+  width: 100%;
   background-color: white;
 
   padding: 20px;
@@ -188,10 +190,16 @@ button:hover {
 
 /* ===== TABLE ===== */
 
-table {
+.tableWrapper {
   width: 100%;
 
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
   border-collapse: collapse;
+  table-layout: auto;
 }
 
 /* ===== TABLE HEADER ===== */
@@ -222,6 +230,21 @@ td {
   color: #312e81;
 }
 
+.income {
+  color: #15803d;
+}
+
+.expense {
+  color: #b91c1c;
+}
+
+td button {
+  border: none;
+  background: none;
+
+  color: #7c3aed;
+}
+
 /* ===== HOVER EFFECT ===== */
 
 tbody tr:hover {
@@ -231,9 +254,10 @@ tbody tr:hover {
 /* ===== BALANCE ===== */
 
 .balance {
+  width: 100%;
   margin: 30px 0;
   text-align: center;
-  background: linear-gradient(135deg, #7c3aed, #5b21b6);
+  background: linear-gradient(135deg, #7c3aed, #312e81);
   color: white;
   padding: 25px 20px;
   border-radius: 12px;
@@ -252,6 +276,34 @@ tbody tr:hover {
   font-size: 2.5rem;
   font-weight: bold;
   letter-spacing: 1px;
+}
+
+/* ===== CLEAR BUTTON ===== */
+
+.clearButton {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  border: none;
+  background: none;
+
+  color: #7c3aed;
+
+  font-size: 0.95rem;
+  font-weight: 400;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.clearButton:hover {
+  color: #d8b4fe;
+}
+
+.clearButton:active {
+  transform: scale(0.97);
 }
 
 /* ===== FOOTER ===== */

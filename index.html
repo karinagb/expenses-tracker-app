@@ -10,7 +10,7 @@
     <header><h1>Expenses Tracker</h1></header>
     <main>
       <div class="forms">
-        <form class="income">
+        <form class="newIncome">
           <h2>New income</h2>
           <label for="incomeName">Description</label>
           <input name="incomeName" id="incomeName" />
@@ -19,7 +19,7 @@
           <button type="submit">Add Income</button>
         </form>
 
-        <form class="expense">
+        <form class="newExpense">
           <h2>New expense</h2>
           <label for="expenseName">Description</label>
           <input name="expenseName" id="expenseName" />
@@ -31,19 +31,22 @@
 
       <div class="history">
         <h1>History</h1>
-        <table>
+        <div class="tableWrapper"> <table>
           <thead>
             <th scope="col">Transaction</th>
             <th scope="col">Amount</th>
+            <th scope="col">Actions</th>
           </thead>
           <tbody></tbody>
-        </table>
+        </table></div>
+       
       </div>
 
       <div class="balance">
         <h1>Balance</h1>
         <p class="balanceValue">$0</p>
       </div>
+      <button class="clearButton" name="clear">Clear all data</button>
     </main>
     <footer>Two Dev</footer>
     <script src="script.js"></script>
