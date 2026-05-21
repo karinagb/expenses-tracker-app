@@ -143,31 +143,26 @@ input:focus {
   box-shadow: 0 0 5px rgba(124, 58, 237, 0.2);
 }
 
-
 input[type='date'] {
   width: 100%;
+  min-width: 0;
+  height: 44px;
 
-  height: 46px;
-
-  padding: 10px;
+  padding: 0 10px;
 
   border: 1px solid #c4b5fd;
-
   border-radius: 8px;
 
   font-size: 0.95rem;
-
   font-family: inherit;
 
   background-color: white;
-
   color: #312e81;
 }
 
 input[type='date']::-webkit-datetime-edit {
   padding: 0;
 }
-
 
 /* ===== BUTTONS ===== */
 
