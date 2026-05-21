@@ -20,18 +20,23 @@ body {
 
 header {
   background-color: #1e1b2e;
-  padding: 30px 20px;
+
+  padding: 22px 20px;
+
   text-align: center;
+
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 header h1 {
-  font-size: 3rem;
-  letter-spacing: 2px;
+  font-size: 2.3rem;
+
+  letter-spacing: 1px;
+
   font-weight: bold;
+
   color: #d8b4fe;
 }
-
 /* ===== MAIN ===== */
 
 main {
@@ -160,7 +165,7 @@ form button {
   transition: 0.2s ease;
 }
 
-button:hover {
+form button:hover {
   background-color: #5b21b6;
 }
 
@@ -242,7 +247,7 @@ td button {
   border: none;
   background: none;
 
-  color: #7c3aed;
+    color: #7c3aed;
 }
 
 /* ===== HOVER EFFECT ===== */
@@ -250,6 +255,11 @@ td button {
 tbody tr:hover {
   background-color: #f5f3ff;
 }
+
+td button:hover {
+  color: #d8b4fe;
+}
+
 
 /* ===== BALANCE ===== */
 

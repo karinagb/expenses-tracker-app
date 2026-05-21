@@ -15,10 +15,12 @@ renderHistory(transactions);
 function addIncome(e) {
   e.preventDefault();
   const incomeName = this.querySelector('[name=incomeName]').value;
+  const incomeDate = this.querySelector('[name=incomeDate]').value;
   const incomeValue = Number(this.querySelector('[name=incomeValue]').value);
 
   const income = {
     description: incomeName,
+    date: incomeDate,
     value: incomeValue,
     type: 'income',
   };
@@ -34,10 +36,12 @@ function addIncome(e) {
 function addExpense(e) {
   e.preventDefault();
   const expenseName = this.querySelector('[name=expenseName]').value;
+  const expenseDate = this.querySelector('[name=expenseDate').value;
   const expenseValue = Number(this.querySelector('[name=expenseValue]').value);
 
   const expense = {
     description: expenseName,
+    date: expenseDate,
     value: expenseValue,
     type: 'expense',
   };
@@ -72,10 +76,13 @@ function renderHistory(transactions) {
   transactions.forEach((transaction, i) => {
     historyItems.innerHTML += `<tr>
         <td>${transaction.description}</td>
-        ${transaction.type === 'income' ? 
-            `<td class='income'>+ $${transaction.value}</td>` : 
-            `<td class='expense'>- $${transaction.value}</td>`} 
-        <td><button data-index=${i}>🗑</button></td>
+        <td>${transaction.date}</td>
+        ${
+          transaction.type === 'income'
+            ? `<td class='income'>+ $${transaction.value}</td>`
+            : `<td class='expense'>- $${transaction.value}</td>`
+        } 
+        <td><button data-index=${i}>Delete</button></td>
     </tr>`;
   });
 }

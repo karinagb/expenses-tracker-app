@@ -14,6 +14,8 @@
           <h2>New income</h2>
           <label for="incomeName">Description</label>
           <input name="incomeName" id="incomeName" />
+          <label for="incomeDate">Date</label>
+          <input type="date" name="incomeDate" id="incomeDate" />
           <label for="incomeValue">Amount ($)</label>
           <input name="incomeValue" id="incomeValue" />
           <button type="submit">Add Income</button>
@@ -23,6 +25,8 @@
           <h2>New expense</h2>
           <label for="expenseName">Description</label>
           <input name="expenseName" id="expenseName" />
+          <label for="expenseDate">Date</label>
+          <input type="date" name="expenseDate" id="expenseDate" />
           <label for="expenseValue">Amount ($)</label>
           <input name="expenseValue" id="expenseValue" />
           <button type="submit">Add Expense</button>
@@ -31,15 +35,17 @@
 
       <div class="history">
         <h1>History</h1>
-        <div class="tableWrapper"> <table>
-          <thead>
-            <th scope="col">Transaction</th>
-            <th scope="col">Amount</th>
-            <th scope="col">Actions</th>
-          </thead>
-          <tbody></tbody>
-        </table></div>
-       
+        <div class="tableWrapper">
+          <table>
+            <thead>
+              <th scope="col">Transaction</th>
+              <th scope="col">Date</th>
+              <th scope="col">Amount</th>
+              <th scope="col">Actions</th>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
       </div>
 
       <div class="balance">
