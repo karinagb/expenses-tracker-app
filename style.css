@@ -145,10 +145,10 @@ input:focus {
 
 input[type='date'] {
   width: 100%;
-  min-width: 0;
-  height: 44px;
 
-  padding: 0 10px;
+  min-width: 0;
+
+  height: 42px;
 
   border: 1px solid #c4b5fd;
   border-radius: 8px;
@@ -158,6 +158,9 @@ input[type='date'] {
 
   background-color: white;
   color: #312e81;
+
+  appearance: none;
+  -webkit-appearance: none;
 }
 
 input[type='date']::-webkit-datetime-edit {
