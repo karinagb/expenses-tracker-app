@@ -54,6 +54,7 @@ main {
 
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   justify-items: center;
+  text-align: center;
 }
 
 /* ===== FORMS WRAPPER ===== */
@@ -113,11 +114,12 @@ label {
   font-weight: bold;
 
   color: #5b21b6;
+  text-align: start;
 }
 
 /* ===== INPUTS ===== */
 
-input {
+form input {
   width: 100%;
 
   padding: 10px;
@@ -169,8 +171,7 @@ form button:hover {
   background-color: #5b21b6;
 }
 
-
-.dateInput {
+input[type='date'] {
   width: 100%;
   min-width: 0;
   appearance: none;
@@ -195,7 +196,7 @@ form button:hover {
 
 .history h1 {
   margin-bottom: 20px;
-
+  text-align: start;
   color: #6d28d9;
 
   font-size: 1.5rem;
@@ -213,6 +214,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   table-layout: auto;
+  text-align: start;
 }
 
 /* ===== TABLE HEADER ===== */
@@ -255,7 +257,7 @@ td button {
   border: none;
   background: none;
 
-    color: #7c3aed;
+  color: #7c3aed;
 }
 
 /* ===== HOVER EFFECT ===== */
@@ -267,7 +269,6 @@ tbody tr:hover {
 td button:hover {
   color: #d8b4fe;
 }
-
 
 /* ===== BALANCE ===== */
 
@@ -315,7 +316,6 @@ td button:hover {
   cursor: pointer;
 
   transition: 0.2s ease;
-
 
   margin: 0 auto;
 }
