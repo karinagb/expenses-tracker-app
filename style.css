@@ -147,11 +147,19 @@ input:focus {
 input[type='date'] {
   width: 100%;
   min-width: 0;
-  height: 42px;
+  height: 46px;
+  padding: 0 10px;
+  border: 1px solid #c4b5fd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: #312e81;
+  background-color: white;
   appearance: none;
   -webkit-appearance: none;
-  font-family: inherit;
 }
+
+
 /* ===== BUTTONS ===== */
 
 form button {
