@@ -173,6 +173,8 @@ form button:hover {
 .dateInput {
   width: 100%;
   min-width: 0;
+  appearance: none;
+  -webkit-appearance: none;
 }
 
 /* ===== HISTORY SECTION ===== */
@@ -313,6 +315,9 @@ td button:hover {
   cursor: pointer;
 
   transition: 0.2s ease;
+
+
+  margin: 0 auto;
 }
 
 .clearButton:hover {
