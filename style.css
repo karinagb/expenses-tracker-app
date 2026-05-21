@@ -146,17 +146,21 @@ input:focus {
 
 input[type='date'] {
   width: 100%;
-  min-width: 0;
   height: 46px;
-  padding: 0 10px;
-  border: 1px solid #c4b5fd;
-  border-radius: 8px;
+  padding: 10px;
   font-size: 0.95rem;
   font-family: inherit;
-  color: #312e81;
+  border: 1px solid #c4b5fd;
+  border-radius: 8px;
   background-color: white;
-  appearance: none;
-  -webkit-appearance: none;
+  color: #312e81;
+}
+
+/* iOS Safari fix */
+input[type='date']::-webkit-datetime-edit {
+  display: flex;
+  align-items: center;
+  min-height: 100%;
 }
 
 
