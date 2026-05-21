@@ -169,6 +169,12 @@ form button:hover {
   background-color: #5b21b6;
 }
 
+
+.dateInput {
+  width: 100%;
+  min-width: 0;
+}
+
 /* ===== HISTORY SECTION ===== */
 
 .history {
@@ -292,6 +298,7 @@ td button:hover {
 
 .clearButton {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 6px;
 
