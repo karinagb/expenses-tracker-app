@@ -143,6 +143,15 @@ input:focus {
   box-shadow: 0 0 5px rgba(124, 58, 237, 0.2);
 }
 
+
+input[type='date'] {
+  width: 100%;
+  min-width: 0;
+  height: 42px;
+  appearance: none;
+  -webkit-appearance: none;
+  font-family: inherit;
+}
 /* ===== BUTTONS ===== */
 
 form button {
@@ -169,13 +178,6 @@ form button {
 
 form button:hover {
   background-color: #5b21b6;
-}
-
-input[type='date'] {
-  width: 100%;
-  min-width: 0;
-  appearance: none;
-  -webkit-appearance: none;
 }
 
 /* ===== HISTORY SECTION ===== */
